@@ -4,11 +4,15 @@
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     hyprland.url = "github:hyprwm/Hyprland";
+
+    stylix.url = "github:danth/stylix";
   };
 
   outputs = inputs@{ nixpkgs, home-manager, ... }:
@@ -19,7 +23,10 @@
 
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
-        modules = [ ./configuration.nix ];
+        modules = [ 
+		./configuration.nix 
+		inputs.stylix.nixosModules.stylix
+	];
 	specialArgs = {
 		inherit inputs;
 	};

@@ -60,6 +60,9 @@
   # Enable Hyprlock
   security.pam.services.hyprlock = {};
 
+  # Simple Stylix
+    stylix.image = ./modules/stylix/wallpaper.jpg;
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "pl";

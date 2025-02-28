@@ -4,6 +4,8 @@
 
   imports = [
    ./modules/git.nix 
+   ./modules/alacritty.nix
+   ./modules/hyprland/hyprland.nix
   ];
 
   home = {
