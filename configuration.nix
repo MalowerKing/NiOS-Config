@@ -51,14 +51,21 @@
   services.xserver.desktopManager.xfce.enable = true;
 
   # Enable Hyprland
-  programs.hyprland.enable = true;
-  programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+  programs.hyprland = {
+    enable = true;
+    package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+    withUWSM = true;
+};
+
+  # Enable Hyprlock
+  security.pam.services.hyprlock = {};
 
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "pl";
     variant = "";
   };
+
 
   # Configure console keymap
   console.keyMap = "pl2";
