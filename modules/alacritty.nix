@@ -1,5 +1,5 @@
-{
-programs.alacrity = {
+{pkgs, lib, ...}: {
+programs.alacritty = {
 
 	enable = true;
 
@@ -10,13 +10,11 @@ programs.alacrity = {
 				family = "FiraCode";
 				style = "Regular";
 			};
+		};
 
-		window = {
-			opacity = "0.8";
-			padding = {
-				x = "15";
-				y = "15";
-			};
+		window.opacity = "0.8";
+		window.padding.x = "15";
+		window.padding.y = "15";
 		selection = "true";
 		};
 	};
