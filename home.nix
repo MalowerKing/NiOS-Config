@@ -6,6 +6,7 @@
    ./modules/git.nix 
    ./modules/alacritty.nix
    ./modules/hyprland/hyprland.nix
+   ./modules/librewolf.nix
   ];
 
   home = {
@@ -16,6 +17,14 @@
     fastfetch
     btop
     gh
+    spotifyd
+    vesktop
+    bitwarden-desktop
+    calibre
+    vlc
+    qbittorrent
+    libreoffice-gt6-fresh
+    varia
   ];
   };
   # Let Home Manager install and manage itself.
