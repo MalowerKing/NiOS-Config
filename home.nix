@@ -23,7 +23,7 @@
     calibre
     vlc
     qbittorrent
-    libreoffice-gt6-fresh
+    libreoffice-fresh
     varia
   ];
   };

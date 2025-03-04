@@ -12,10 +12,7 @@ programs.alacritty = {
 			};
 		};
 
-		window.opacity = "0.8";
-		window.padding.x = "15";
-		window.padding.y = "15";
-		selection = "true";
-		};
+		window.opacity = 0.8;
 	};
+};
 }
